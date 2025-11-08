@@ -19,7 +19,7 @@ try:
                 user = data["string_list_data"][0]["value"]
                 userId = cl.user_id_from_username(user)
                 cl.user_unfollow(userId)
-                time.sleep(60)
+                time.sleep(300)
             except Exception as e:
                 print(f"An error occurred: {e}")
                 pass
