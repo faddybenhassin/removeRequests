@@ -3,8 +3,8 @@ import time
 import json
 
 
-USERNAME = "fadddyyyyyy"
-PASSWORD = "HnE0b5N0]5-B"
+USERNAME = "ekbt ur username"
+PASSWORD = "ektb zkm el mdp houni mt5afch ma nikekch"
 
 
 try:
