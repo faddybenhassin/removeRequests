@@ -1,10 +1,13 @@
 from instagrapi import Client
+import os
+from dotenv import load_dotenv
 import time
 import json
 
+load_dotenv()
 
-USERNAME = "ekbt ur username"
-PASSWORD = "ektb zkm el mdp houni mt5afch ma nikekch"
+USERNAME = os.getenv("USERNAME")
+PASSWORD = os.getenv("PASSWORD")
 
 
 try:
