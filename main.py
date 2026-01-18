@@ -9,17 +9,15 @@ load_dotenv()
 USERNAME = os.getenv("USERNAME")
 PASSWORD = os.getenv("PASSWORD")
 
-
+cl = Client()
+cl.login(USERNAME, PASSWORD)
 try:
     with open('pending_follow_requests.json', 'r') as file:
         requests = json.load(file)["relationships_follow_requests_sent"]
-        
-        cl = Client()
-        cl.login(USERNAME, PASSWORD)
 
         for data in requests:
             try:
-                user = data["string_list_data"][0]["value"]
+                user = data["string_list_data"][0]["href"]
                 userId = cl.user_id_from_username(user)
                 cl.user_unfollow(userId)
                 time.sleep(300)
